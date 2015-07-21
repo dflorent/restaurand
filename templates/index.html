@@ -2,15 +2,41 @@
 <html lang="fr">
 	<head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Restaurand</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     </head>
 	<body>
-        <p>restaurand</p>
-        <script src="{{ url_for('static', filename='js/vendor/json2.min.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/vendor/jquery-1.11.3.min.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/vendor/underscore-min.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/vendor/backbone-min.js') }}"></script>
+        <div class="wrapper">
+            <button>Randomiser</button>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Liste des restaurants</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div><!-- .wrapper -->
+        
+        {% raw %}
+        <script id="restaurants-list" type="text/x-handlebars-template">
+            {{#if data.length}}
+                {{#each data}}
+                <tr{{#unless @index}} class="first-row"{{/unless}}>
+                    <td>{{id}}</td>
+                    <td>{{name}}</td>
+                </tr>
+                {{/each}}
+            {{/if}}
+        </script>
+        {% endraw %}
+
+        <script src="{{ url_for('static', filename='bower_components/jquery/dist/jquery.min.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
         <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     </body>
 </html>

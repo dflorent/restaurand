@@ -2,3 +2,4 @@ venv
 *.pyc
 .env
 local_settings.py
+static/js/credentials.json
