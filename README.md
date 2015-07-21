@@ -8,7 +8,6 @@ choosing a place to go to eat with friends and co-workers.
 -----
 
 - Secure credentials
-- Use bower for underscore and handlebars
 
 Prerequisites
 -------------
