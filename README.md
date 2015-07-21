@@ -43,9 +43,9 @@ Dependencies
 
 Specify dependencies to Heroku with Pip.
 
-``
+```
 pip freeze > requirements.txt
-``
+```
 
 Installing dependencies with this following command.
 

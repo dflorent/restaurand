@@ -3,22 +3,19 @@
     var App = {
 
         init: function() {
-            $.getJSON('static/js/credentials.json', this.getRestaurants);
+            this.getRestaurants;
             $('button').on('click', this.shuffle);
         },
 
         getRestaurants: function(params) {
             $.ajax({
-                url: params.apiURL.concat('/restaurants'),
+                url: 'https://restaurand-api.herokuapp.com/api/v1/restaurants',
                 cache: false,
                 type: 'GET',
                 dataType: 'json',
                 contentType: 'application/json',
                 success: function(data) {
                     App.showRestaurantsList(data);
-                },
-                headers: {
-                    'Authorization': 'Basic ' + window.btoa(params.apiUsername.concat(':', params.apiPassword)),
                 },
             });
         }, 
