@@ -14,6 +14,9 @@
                 type: 'GET',
                 dataType: 'json',
                 contentType: 'application/json',
+                complete: function() {
+                    $('#ajax-loader').remove();
+                },
                 success: function(data) {
                     App.showRestaurantsList(data);
                 },
