@@ -3,7 +3,7 @@
     var App = {
 
         init: function() {
-            this.getRestaurants;
+            this.getRestaurants();
             $('button').on('click', this.shuffle);
         },
 
