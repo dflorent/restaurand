@@ -22,9 +22,10 @@ Tools used
 - Python Flask
 - Heroku
 - Bower
+- Twitter Bootstrap
 - jQuery
-- Handlebars
 - Underscore
+- React
 
 Start the app
 -------------
