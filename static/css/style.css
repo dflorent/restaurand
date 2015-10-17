@@ -1,60 +1,20 @@
 body {
-    font-family: sans-serif;
-    font-size: 14px;
-    color: #444;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 30px;
-    border-color: #ccc;
+    margin-top: 20px;
 }
 
-th {
-    text-align: left;
-}
-
-tr td:first-child,
-th:first-child {
-    width: 5%;
-    text-align: center;
-}
-
-td, 
-th {
-    padding: 10px;
-}
-
-.first-row td {
-    background: #eee;
-}
-
-.first-row td + td {
+.active td {
     font-weight: bold;
-    color: #222;
-}
-
-button {
-    border: 0;
-    background: #0078E7;
-    color: white;
-    cursor: pointer;
-    padding: 8px 20px;
-}
-
-@media(min-width: 960px) {
-    button:hover {
-        background: #265778;
-    }
 }
 
 .wrapper {
-    max-width: 960px;
-    margin: 30px auto;
+    max-width: 730px;
 }
 
-#ajax-loader {
+.ajax-loader {
     text-align: center;
-    margin-top: 30px;
 }
